@@ -18,12 +18,14 @@ python3 app.py
 This is Flask REST project coded in python version 3.6
 
 ## Endpoints
-  1. http://127.0.0.1:5000/register
-  2. http://127.0.0.1:5000/auth
-  3. http://127.0.0.1:5000/stores
-  4. http://127.0.0.1:5000/items
-  5. http://127.0.0.1:5000/item/item_name
-  6. http://127.0.0.1:5000/store/store_id
+  1. POST http://127.0.0.1:5000/register
+  2. POST http://127.0.0.1:5000/auth
+  3. GET http://127.0.0.1:5000/stores
+  4. GET http://127.0.0.1:5000/items
+  5. POST, PUT http://127.0.0.1:5000/item/item_name
+  6. POST http://127.0.0.1:5000/store/store_id
+  7. DELETE http://127.0.0.1:5000/store/store_name
+  8. DELETE http://127.0.0.1:5000/item/item_name
   
 ## Live view 
 open postman collection json file 
