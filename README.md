@@ -31,8 +31,10 @@ open postman collection json file
   2. https://flask-store-rex.herokuapp.com/auth | POST
   3. https://flask-store-rex.herokuapp.com/stores | GET
   4. https://flask-store-rex.herokuapp.com/items  | GET
-  5. https://flask-store-rex.herokuapp.com/items/item_name  | POST, PUT
+  5. https://flask-store-rex.herokuapp.com/item/item_name  | POST, PUT
   6. https://flask-store-rex.herokuapp.com/store/store_id | POST
+  7. https://flask-store-rex.herokuapp.com/store/store_name | DELETE
+  8. https://flask-store-rex.herokuapp.com/item/item_name | DELETE
 
 
 ## Implementation
