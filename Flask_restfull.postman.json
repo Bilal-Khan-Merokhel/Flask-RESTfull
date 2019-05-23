@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "f804adca-ba8b-4d88-8690-998e99d3f749",
+		"name": "Flask_Test_Rest_API",
+		"description": "Testing my API and learning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Flask RESfull API",
+			"item": [
+				{
+					"name": "/items",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/items",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"items"
+							]
+						},
+						"description": "This should return a list of items, each in json format"
+					},
+					"response": []
+				},
+				{
+					"name": "/item/<name>",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/item/<name>",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"item",
+								"<name>"
+							]
+						},
+						"description": "This will return one specific item uniquely identified by its name. No two items may have the same name"
+					},
+					"response": []
+				},
+				{
+					"name": "/item/<name>",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "JWT {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"price\": 15.99,\n\t\"store_id\": 1\n}"
+						},
+						"url": {
+							"raw": "{{url}}/item/samsung",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"item",
+								"samsung"
+							]
+						},
+						"description": "This will create item"
+					},
+					"response": []
+				},
+				{
+					"name": "/item/<name>",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "JWT {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/item/desk",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"item",
+								"desk"
+							]
+						},
+						"description": "This will delete the item, uniquely identified by name"
+					},
+					"response": []
+				},
+				{
+					"name": "/item/<name>",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "JWT {{jwt_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"price\": 17.99,\n\t\"store_id\": 1\n}"
+						},
+						"url": {
+							"raw": "{{url}}/item/mobile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"item",
+								"mobile"
+							]
+						},
+						"description": "This will create or update the  item"
+					},
+					"response": []
+				},
+				{
+					"name": "/store/<name>",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT {{jwt_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/store/<name>",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"store",
+								"<name>"
+							]
+						},
+						"description": "This will return one specific store uniquely identified by its name. No two stores may have the same name"
+					},
+					"response": []
+				},
+				{
+					"name": "/store/<name> ",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT {{jwt_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/store/<name>",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"store",
+								"<name>"
+							]
+						},
+						"description": "This will create a store"
+					},
+					"response": []
+				},
+				{
+					"name": "/store/<name> ",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT {{jwt_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/store/<name>",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"store",
+								"<name>"
+							]
+						},
+						"description": "This will delete a store"
+					},
+					"response": []
+				},
+				{
+					"name": "/stores",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "JWT {{jwt_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/stores",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stores"
+							]
+						},
+						"description": "This will get a list of stores"
+					},
+					"response": []
+				},
+				{
+					"name": "/auth",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "79d61471-bf50-4feb-9d61-84edd0f0fa45",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"Access Token was not Empty\"] = jsonData.value !== \"\";",
+									"postman.setEnvironmentVariable(\"jwt_token\", jsonData.access_token)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"username\",\n\t\"password\": \"password\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/auth",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth"
+							]
+						},
+						"description": "Login to the App API"
+					},
+					"response": []
+				},
+				{
+					"name": "/register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"username\",\n\t\"password\": \"password\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						},
+						"description": "Register as a User "
+					},
+					"response": []
+				}
+			],
+			"description": "This is Testing Api connected to sqlite3 and using sql queries ",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6778f928-47ac-45e6-aca0-a2a321e1d457",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "44b9dc36-8787-48a7-9fb7-85e767a9d80d",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
