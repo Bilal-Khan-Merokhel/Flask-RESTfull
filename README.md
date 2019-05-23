@@ -24,6 +24,15 @@ This is Flask REST project coded in python version 3.6
   4. http://127.0.0.1:5000/items
   5. http://127.0.0.1:5000/item/item_name
   6. http://127.0.0.1:5000/store/store_id
+  
+## Live view 
+open postman collection json file 
+  1. https://flask-store-rex.herokuapp.com/register | POST
+  2. https://flask-store-rex.herokuapp.com/auth | POST
+  3. https://flask-store-rex.herokuapp.com/stores | GET
+  4. https://flask-store-rex.herokuapp.com/items  | GET
+  5. https://flask-store-rex.herokuapp.com/items/item_name  | POST, PUT
+  6. https://flask-store-rex.herokuapp.com/store/store_id | POST
 
 
 ## Implementation
